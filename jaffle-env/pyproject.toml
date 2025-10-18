@@ -1,0 +1,18 @@
+[project]
+name = "jaffle-env"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "pprachan",email = "panichou@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "jaffle_env", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
