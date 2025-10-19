@@ -1,36 +1,4 @@
--- select 
---     o.order_id
---     ,o.customer_id
---     ,c.first_name
---     ,c.last_name
--- from {{ ref('stg_customers') }} as c
--- join {{ ref('stg_orders') }} o on o.customer_id = c.customer_id
-
-
-----
-with 
-
--- customers as (
-
---     select
---         id as customer_id,
---         name
---     from jaffle_shop.raw.raw_customers
-
--- ),
-
--- orders as (
-
---     select
---         id as order_id,
---         customer as customer_id,
---         ordered_at
---     from jaffle_shop.raw.raw_orders
-
--- ),
-
 customer_orders as (
-
     select
         customer_id,
         min(ordered_at) as first_order_date,

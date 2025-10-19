@@ -29,7 +29,7 @@ resource "snowflake_schema" "raw_schema" {
 resource "snowflake_schema" "staging_schema" {
   database    = snowflake_database.jaffle_shop.name
   name        = "STAGING"
-  comment     = "Light transformations and formatting on top of RAW."
+  comment     = "Light transformations and formatting on top of RAW, no joins."
   is_managed  = false
 }
 
@@ -37,7 +37,7 @@ resource "snowflake_schema" "staging_schema" {
 resource "snowflake_schema" "analytics_schema" {
   database    = snowflake_database.jaffle_shop.name
   name        = "ANALYTICS"
-  comment     = "Models feeding from the clean STAGING schema."
+  comment     = "Models containing joins, aggregations, complex logic."
   is_managed  = false
 }
 
