@@ -1,4 +1,5 @@
 customer_orders as (
+    
     select
         customer_id,
         min(ordered_at) as first_order_date,
