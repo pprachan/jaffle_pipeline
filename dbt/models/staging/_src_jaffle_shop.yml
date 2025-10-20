@@ -1,5 +1,5 @@
 sources:
-  - name: raw
+  - name: jaffle_shop
     database: JAFFLE_SHOP
     schema: RAW        
     tables:
