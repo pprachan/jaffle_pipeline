@@ -6,4 +6,4 @@
         ,subtotal
         ,tax_paid
         ,order_total
-    FROM {{ source('raw', 'raw_orders') }}
+    FROM {{ source('jaffle_shop', 'raw_orders') }}

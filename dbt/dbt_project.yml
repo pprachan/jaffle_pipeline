@@ -8,7 +8,7 @@ model-paths: ["models"]
 # analysis-paths: ["analysis"]
 # test-paths: ["tests"]
 # seed-paths: ["seeds"]
-# macro-paths: ["macros"]
+macro-paths: ["macros"]
 
 # target-path: "target"
 # clean-targets: ["target", "dbt_packages"]
@@ -18,8 +18,9 @@ models:
     examples:
       +materialized: view
     staging:
-      +materialized: table
-      +schema: staging
+      # +schema: staging
+      +materialized: view
+    marts:
+      +materialized: table 
     analytics:
       +materialized: table
-    
