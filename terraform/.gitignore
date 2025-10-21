@@ -1,0 +1,18 @@
+# Terraform state files — contain credentials, resource IDs, etc.
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate*
+*.tfplan
+
+# Local Terraform directories and provider binaries
+.terraform/
+.terraform.lock.hcl
+
+# Environment files (secrets, credentials)
+.env
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
