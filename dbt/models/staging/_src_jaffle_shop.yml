@@ -4,6 +4,7 @@ sources:
     schema: RAW        
     tables:
       - name: raw_customers
+        freshness: null 
       - name: raw_items
       - name: raw_orders
         config: 
