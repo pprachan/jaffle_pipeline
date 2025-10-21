@@ -3,12 +3,15 @@ venv
 .env
 env
 
+
+dbt/dbt_packages
 data/
 terraform/.terraform/
 target/
 packages/
 logs/
 profiles.yml
+
 
 .DS_Store
 
