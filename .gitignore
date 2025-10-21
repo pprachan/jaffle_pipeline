@@ -1,18 +1,94 @@
-.venv
-venv
+# ==============================================
+# 🐍 Python
+# ==============================================
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+*.log
+*.tmp
+
+# ==============================================
+# 🔐 Environment / Config / Secrets
+# ==============================================
 .env
-env
-
-data/
-terraform/.terraform/
-target/
-dbt_packages/
-logs/
-profiles.yml
-
-.DS_Store
-
+.env.*
+env/
 .user.yml
+profiles.yml
+.envrc
+.env.local
 
-.ruff_cache
-__pycache__
+# ==============================================
+# 🧠 dbt
+# ==============================================
+dbt/dbt_packages/
+**/dbt_packages/
+target/
+logs/
+packages/
+manifest.json
+run_results.json
+sources.json
+graph.gpickle
+# Ignore compiled docs and artifacts
+dbt_modules/
+
+# ==============================================
+# ☁️ Airflow
+# ==============================================
+# Airflow generated folders
+logs/
+airflow_logs/
+dags/__pycache__/
+plugins/__pycache__/
+# Optional: ignore compiled DAG zip bundles
+dags/*.zip
+# Airflow local config / SQLite
+airflow.cfg
+unittests.cfg
+# Airflow webserver/metadata db
+airflow.db
+# DAG parser cache (Airflow 2.9+)
+.airflow_bundles/
+
+# ==============================================
+# 🧱 Terraform
+# ==============================================
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+terraform.tfstate.backup
+.terraform.lock.hcl
+
+# ==============================================
+# 💾 Data / Temporary Files
+# ==============================================
+data/
+tmp/
+temp/
+.cache/
+__snapshots__/
+
+# ==============================================
+# 💅 Lint / Tooling
+# ==============================================
+.ruff_cache/
+.mypy_cache/
+pytest_cache/
+.coverage
+coverage.xml
+
+# ==============================================
+# 💻 OS / IDE files
+# ==============================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace

@@ -15,12 +15,7 @@ macro-paths: ["macros"]
 
 models:
   jaffle_shop:
-    examples:
-      +materialized: view
     staging:
-      # +schema: staging
       +materialized: view
     marts:
       +materialized: table 
-    analytics:
-      +materialized: table
