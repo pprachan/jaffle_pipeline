@@ -4,9 +4,9 @@ venv
 env
 
 
-dbt/dbt_packages
+dbt/*/dbt_packages
 data/
-terraform/.terraform/
+terraform/*/.terraform/
 target/
 packages/
 logs/
