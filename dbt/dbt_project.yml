@@ -7,7 +7,7 @@ profile: 'jaffle_shop'
 model-paths: ["models"]
 # analysis-paths: ["analysis"]
 # test-paths: ["tests"]
-# seed-paths: ["seeds"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 
 # target-path: "target"
@@ -19,3 +19,5 @@ models:
       +materialized: view
     marts:
       +materialized: table 
+    snowflake_spend:
+      enabled: true 
