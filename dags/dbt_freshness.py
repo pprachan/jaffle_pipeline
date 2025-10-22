@@ -23,7 +23,7 @@ with DAG(
 
     # Define the dbt source freshness command
     dbt_source_freshness = BashOperator(
-        task_id="dbt_source_freshness_check",
+        task_id="dbt_source_freshness",
         bash_command=f"""
         cd {DBT_PROJECT_DIR} &&
         dbt source freshness --profiles-dir {DBT_PROFILES_DIR} --target dev

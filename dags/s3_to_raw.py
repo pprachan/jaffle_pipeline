@@ -5,7 +5,7 @@ from airflow.sdk import task
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 
 # --- Configuration ---
-STAGE_NAME = "@jaffle_shop.raw.s3_external_stage"
+STAGE_NAME = "@jaffle_shop.raw.s3_classic_external_stage"
 DATABASE_NAME = "JAFFLE_SHOP"
 SCHEMA_NAME = "RAW"
 FILE_FORMAT = "CSV_COMMA_FORMAT"           # normal file format for COPY INTO

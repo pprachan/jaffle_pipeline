@@ -1,9 +1,6 @@
     SELECT
         id as order_id
-        ,customer as customer_id
-        ,ordered_at
-        ,store_id
-        ,subtotal
-        ,tax_paid
-        ,order_total
+        ,user_id as customer_id
+        ,order_date
+        ,status
     FROM {{ source('jaffle_shop', 'raw_orders') }}
